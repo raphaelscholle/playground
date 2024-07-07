@@ -45,7 +45,7 @@ int main() {
     int start_row = (row - num_lines) / 2;
     for (int i = 0; i < num_lines; ++i) {
         int len = strlen(text[i]);
-        int start_col = (col - len) / 2;
+        int start_col = (col - len) / 8;
         mvprintw(start_row + i, start_col, "%s", text[i]);
     }
 
