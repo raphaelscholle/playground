@@ -42,10 +42,10 @@ int main() {
     };
 
     int num_lines = sizeof(text) / sizeof(text[0]);
-    int start_row = (row - num_lines) / 2;
+    int start_row = (row - num_lines) / 10;
     for (int i = 0; i < num_lines; ++i) {
         int len = strlen(text[i]);
-        int start_col = (col - len) / 8;
+        int start_col = (col - len) / 2;
         mvprintw(start_row + i, start_col, "%s", text[i]);
     }
 
