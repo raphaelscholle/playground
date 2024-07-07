@@ -21,8 +21,9 @@ int main() {
         " ##     ## ########  ######   ## ## ## ######### ##     ##",
         " ##     ## ##        ##       ##  #### ##     ## ##     ##",
         " ##     ## ##        ##       ##   ### ##     ## ##     ##",
-        "  #######  ##        ######## ##    ## ##     ## ######## "                                                                                                      
-                                                                                    
+        "  #######  ##        ######## ##    ## ##     ## ######## ",                                                                                                      
+        "",
+        ""                                                                            
     };
 
     int num_lines = sizeof(text) / sizeof(text[0]);
@@ -31,6 +32,11 @@ int main() {
         int len = strlen(text[i]);
         int start_col = (col - len) / 2;
         mvprintw(start_row + i, start_col, "%s", text[i]);
+    }
+
+     // Seperator
+    for (int i = 0; i < col; ++i) {
+        mvaddch(start_row + num_lines, i, '=');
     }
 
     // Refresh the screen to show the message
