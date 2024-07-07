@@ -52,9 +52,11 @@ int main() {
     // Refresh the screen to show the message
     refresh();
 
-    // Wait for a key press before exiting
-    getch();
-
+    int ch;
+    // Wait for the Esc key before exiting
+    while ((ch = getch()) != 27) {
+        // Do nothing, just loop until Esc is pressed
+    }
     // End ncurses mode
     endwin();
 
